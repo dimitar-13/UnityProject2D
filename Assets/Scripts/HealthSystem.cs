@@ -34,7 +34,6 @@ public class UnitHealth : MonoBehaviour
             //Play dead animation
             //Show GameOver screen
         }
-        UpdateUI();
     }
 
     public void Heal(int amount)
@@ -44,7 +43,6 @@ public class UnitHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        UpdateUI();
     }
 
     void UpdateUI()

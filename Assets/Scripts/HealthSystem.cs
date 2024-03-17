@@ -20,11 +20,6 @@ public class UnitHealth : MonoBehaviour
         UpdateUI();
     }
 
-    void Update()
-    {
-        UpdateUI();
-    }
-
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
@@ -34,15 +29,17 @@ public class UnitHealth : MonoBehaviour
             //Play dead animation
             //Show GameOver screen
         }
+        UpdateUI();
     }
 
     public void Heal(int amount)
     {
         currentHealth += amount;
-        if (currentHealth > 3)
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
+        UpdateUI();
     }
 
     void UpdateUI()
